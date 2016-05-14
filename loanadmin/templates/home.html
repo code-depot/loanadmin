@@ -1,1 +1,38 @@
 {% extends 'base.html' %} 
+
+
+{% block content %}
+ <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header"> Assigned Tickets </h1>
+
+       
+          <!--h2 class="sub-header">Tickets Pending</h2-->
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Ticket-ID</th>
+                  <th>Applicaton-ID</th>
+                  <th>Created</th>
+                  <th>Last Update</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              	{% for tickets in object_list %}
+              		<tr>
+            			<td>{{ tickets.ticket_id}}</td>
+            			<td>{{ tickets.application_id}}</td>
+            			<td>{{ tickets.created_time}}</td>
+            			<td>{{ tickets.last_update_time}}</td>
+            			<td>{{ tickets.get_status_display}}</td>
+            		</tr>
+       			{% endfor %}
+                
+              </tbody>
+            </table>
+          </div>
+       
+ </div>
+{% endblock %}
