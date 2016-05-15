@@ -20,3 +20,10 @@ class Ticket(models.Model) :
     )
 
  	status = models.IntegerField(choices=STATUS_OPTIONS,default=1)
+ 	
+# This is the model pertaining to the Loan Application Table 	
+class LoanApplication(models.Model) :
+
+	loan_application_id = models.IntegerField(primary_key=True) 
+
+

@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+
+
+{% block content %}
+ <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header"> Loan Details </h1>
+
+       
+          <!--h2 class="sub-header">Tickets Pending</h2-->
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Loan Details</th>
+             
+                </tr>
+              </thead>
+              <tbody>
+
+              	{% for loanApplications in object_list %}
+              		<tr>
+            			<td>{{ loanApplications.loanapplication_id}}</td>
+            	
+            		</tr>
+       			{% endfor %}
+                
+              </tbody>
+            </table>
+          </div>
+       
+ </div>
+{% endblock %}

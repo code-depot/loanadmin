@@ -22,7 +22,7 @@
 
               	{% for tickets in object_list %}
               		<tr>
-            			<td>{{ tickets.ticket_id}}</td>
+            			<td><a href="/loanadmin/ticketdetails/{{ tickets.ticket_id}}">{{ tickets.ticket_id}}</a></td>
             			<td>{{ tickets.application_id}}</td>
             			<td>{{ tickets.created_time}}</td>
             			<td>{{ tickets.last_update_time}}</td>

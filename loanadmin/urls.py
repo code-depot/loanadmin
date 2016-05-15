@@ -17,5 +17,7 @@ from django.conf.urls import url
 from loanadmin import views
 
 urlpatterns = [
-    url(r'^', views.TicketList.as_view()),
+    url(r'^alltickets$', views.TicketList.as_view()),
+    url(r'^loanapplicationdetails$', views.LoanApplicationDetails.as_view()),
+    url(r'^ticketdetails/(\d+)', views.TicketDetails.as_view()),
 ]
